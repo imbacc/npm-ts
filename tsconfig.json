@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": ".",
+    "strict": true,
+    "noLib": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext", "dom"],
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "alwaysStrict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "useDefineForClassFields": true,
+    "diagnostics": true,
+    "incremental": true,
+    "paths": {
+      "@/*": ["libs/*"],
+      "@types/*": ["types/*"]
+    },
+    "outDir": "./dist",
+    "typeRoots": ["types"]
+  },
+  "include": ["libs/*.ts", "types/*.ts", "lib/**/*.tsx", "lib/**/*.vue"],
+  "exclude": ["node_modules", "test"]
+}

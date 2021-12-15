@@ -1,0 +1,69 @@
+{
+  "name": "test-npmts",
+  "version": "1.0.6",
+  "description": "描述",
+  "main": "dist/test-npmts.ts",
+  "types": "dist/test-npmts.d.ts",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "jest",
+    "init": "del /q /s node_modules && pnpm install",
+    "pub": "npm run build && npm publish --registry=https://registry.npmjs.org/",
+    "pub:beta": "npm run build && npm publish --registry=https://registry.npmjs.org/ --dist-tag beta"
+  },
+  "jest": {
+    "resetMocks": false
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "directories": {
+    "libs": "libs"
+  },
+  "dependencies": {
+    "qs-stringify": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-syntax-typescript": "^7.16.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@babel/types": "^7.16.0",
+    "@jest/types": "^27.4.2",
+    "@types/babel__generator": "^7.6.3",
+    "@types/yargs-parser": "^20.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "26",
+    "lint-staged": "^10.2.11",
+    "mime-types": "^2.1.34",
+    "prettier": "2.0.0",
+    "prettier-eslint": "^13.0.0",
+    "ts-jest": "^26.0.0",
+    "ts-loader": "^8.0.12",
+    "typescript": "^3.9.3",
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imbacc/npm-ts.git"
+  },
+  "keywords": [
+    "request"
+  ],
+  "author": "imbacc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imbacc/npm-ts/issues"
+  },
+  "homepage": "https://github.com/imbacc/npm-ts#readme",
+  "engines": {
+    "node": ">= 14",
+    "pnpm": ">= 6"
+  }
+}
