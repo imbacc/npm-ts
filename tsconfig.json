@@ -31,9 +31,8 @@
       "@/*": ["libs/*"],
       "@types/*": ["types/*"]
     },
-    "outDir": "./dist",
     "typeRoots": ["types"]
   },
   "include": ["libs/*.ts", "types/*.ts", "lib/**/*.tsx", "lib/**/*.vue"],
-  "exclude": ["node_modules", "test"]
+  "exclude": ["node_modules", "dist"]
 }

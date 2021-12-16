@@ -35,6 +35,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new webpack.BannerPlugin(`v${packageConfig.version}\nupdate: ${new Date().toLocaleString()}`)
+    new webpack.BannerPlugin(`v${packageConfig.version}\nupdate: ${new Date().toLocaleString('zh')}`)
   ]
 }
