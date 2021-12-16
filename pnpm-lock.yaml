@@ -7,6 +7,7 @@ specifiers:
   '@babel/types': ^7.16.0
   '@jest/types': ^27.4.2
   '@types/babel__generator': ^7.6.3
+  '@types/jest': ^27.0.3
   '@types/yargs-parser': ^20.2.1
   '@typescript-eslint/eslint-plugin': ^5.7.0
   '@typescript-eslint/parser': 5.0.0
@@ -21,7 +22,7 @@ specifiers:
   prettier: 2.0.0
   prettier-eslint: ^13.0.0
   qs-stringify: ^1.2.1
-  ts-jest: ^26.0.0
+  ts-jest: ^26.5.6
   ts-loader: ^8.0.12
   typescript: ^3.9.3
   webpack: ^5.10.3
@@ -37,6 +38,7 @@ devDependencies:
   '@babel/types': registry.npmmirror.com/@babel/types/7.16.0
   '@jest/types': registry.npmmirror.com/@jest/types/27.4.2
   '@types/babel__generator': registry.npmmirror.com/@types/babel__generator/7.6.3
+  '@types/jest': registry.npmmirror.com/@types/jest/27.0.3
   '@types/yargs-parser': registry.npmmirror.com/@types/yargs-parser/20.2.1
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.7.0_7f025be09817138412eaa48b2e8ab2d8
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.0.0_eslint@7.32.0+typescript@3.9.10
@@ -564,6 +566,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: registry.nlark.com/color-convert/2.0.1
+    dev: true
+
+  registry.nlark.com/ansi-styles/5.2.0:
+    resolution: {integrity: sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/ansi-styles/download/ansi-styles-5.2.0.tgz}
+    name: ansi-styles
+    version: 5.2.0
+    engines: {node: '>=10'}
     dev: true
 
   registry.nlark.com/anymatch/2.0.0:
@@ -4508,6 +4517,15 @@ packages:
       '@types/istanbul-lib-report': registry.npmmirror.com/@types/istanbul-lib-report/3.0.0
     dev: true
 
+  registry.npmmirror.com/@types/jest/27.0.3:
+    resolution: {integrity: sha512-cmmwv9t7gBYt7hNKH5Spu7Kuu/DotGa+Ff+JGRKZ4db5eh8PnKS4LuebJ3YLUoyOyIHraTGyULn23YtEAm0VSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/jest/download/@types/jest-27.0.3.tgz}
+    name: '@types/jest'
+    version: 27.0.3
+    dependencies:
+      jest-diff: registry.npmmirror.com/jest-diff/27.4.2
+      pretty-format: registry.npmmirror.com/pretty-format/27.4.2
+    dev: true
+
   registry.npmmirror.com/@types/json-schema/7.0.9:
     resolution: {integrity: sha1-l+3JA36gw4WFMgsolk3eOznkZg0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz}
     name: '@types/json-schema'
@@ -5266,6 +5284,13 @@ packages:
     engines: {node: '>= 10.14.2'}
     dev: true
 
+  registry.npmmirror.com/diff-sequences/27.4.0:
+    resolution: {integrity: sha512-YqiQzkrsmHMH5uuh8OdQFU9/ZpADnwzml8z0O5HvRNda+5UZsaX/xN+AAxfR2hWq1Y7HZnAzO9J5lJXOuDz2Ww==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/diff-sequences/download/diff-sequences-27.4.0.tgz}
+    name: diff-sequences
+    version: 27.4.0
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dev: true
+
   registry.npmmirror.com/domexception/2.0.1:
     resolution: {integrity: sha1-+0Su+6eT4VdLCvau0oAdBXUp8wQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domexception/download/domexception-2.0.1.tgz}
     name: domexception
@@ -5850,6 +5875,18 @@ packages:
       pretty-format: registry.npmmirror.com/pretty-format/26.6.2
     dev: true
 
+  registry.npmmirror.com/jest-diff/27.4.2:
+    resolution: {integrity: sha512-ujc9ToyUZDh9KcqvQDkk/gkbf6zSaeEg9AiBxtttXW59H/AcqEYp1ciXAtJp+jXWva5nAf/ePtSsgWwE5mqp4Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-diff/download/jest-diff-27.4.2.tgz}
+    name: jest-diff
+    version: 27.4.2
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dependencies:
+      chalk: registry.npmmirror.com/chalk/4.1.2
+      diff-sequences: registry.npmmirror.com/diff-sequences/27.4.0
+      jest-get-type: registry.npmmirror.com/jest-get-type/27.4.0
+      pretty-format: registry.npmmirror.com/pretty-format/27.4.2
+    dev: true
+
   registry.npmmirror.com/jest-docblock/26.0.0:
     resolution: {integrity: sha1-Pi+iCJn8koyxO9D/aL03EaNoibU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-docblock/download/jest-docblock-26.0.0.tgz}
     name: jest-docblock
@@ -5911,6 +5948,13 @@ packages:
     name: jest-get-type
     version: 26.3.0
     engines: {node: '>= 10.14.2'}
+    dev: true
+
+  registry.npmmirror.com/jest-get-type/27.4.0:
+    resolution: {integrity: sha512-tk9o+ld5TWq41DkK14L4wox4s2D9MtTpKaAVzXfr5CUKm5ZK2ExcaFE0qls2W71zE/6R2TxxrK9w2r6svAFDBQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-get-type/download/jest-get-type-27.4.0.tgz}
+    name: jest-get-type
+    version: 27.4.0
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
   registry.npmmirror.com/jest-haste-map/26.6.2:
@@ -6636,6 +6680,18 @@ packages:
       '@jest/types': registry.npmmirror.com/@jest/types/26.6.2
       ansi-regex: registry.nlark.com/ansi-regex/5.0.1
       ansi-styles: registry.nlark.com/ansi-styles/4.3.0
+      react-is: registry.npmmirror.com/react-is/17.0.2
+    dev: true
+
+  registry.npmmirror.com/pretty-format/27.4.2:
+    resolution: {integrity: sha512-p0wNtJ9oLuvgOQDEIZ9zQjZffK7KtyR6Si0jnXULIDwrlNF8Cuir3AZP0hHv0jmKuNN/edOnbMjnzd4uTcmWiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pretty-format/download/pretty-format-27.4.2.tgz}
+    name: pretty-format
+    version: 27.4.2
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dependencies:
+      '@jest/types': registry.npmmirror.com/@jest/types/27.4.2
+      ansi-regex: registry.nlark.com/ansi-regex/5.0.1
+      ansi-styles: registry.nlark.com/ansi-styles/5.2.0
       react-is: registry.npmmirror.com/react-is/17.0.2
     dev: true
 
