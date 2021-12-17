@@ -8,9 +8,7 @@ const packageConfig = require('./package.json')
 
 module.exports = {
   mode: 'production',
-  entry: {
-    index: './libs/index.ts'
-  },
+  entry: './libs/index.ts',
   output: {
     path: resolve(__dirname, 'dist'),
     filename: '[name].js'

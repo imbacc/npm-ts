@@ -2,8 +2,8 @@
   "name": "imba-npm-ts",
   "version": "1.0.0",
   "description": "描述",
-  "main": "dist/test-npmts.ts",
-  "types": "dist/test-npmts.d.ts",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "jest",
@@ -13,9 +13,6 @@
     "pub": "npm publish --access=public --registry=https://registry.npmjs.org/",
     "pub:beta": "npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/",
     "preinstall": "npx only-allow pnpm"
-  },
-  "jest": {
-    "resetMocks": false
   },
   "files": [
     "dist/**/*"
@@ -56,7 +53,7 @@
     "url": "git+https://github.com/imbacc/npm-ts.git"
   },
   "keywords": [
-    "request"
+    "keywords"
   ],
   "author": "imbacc",
   "license": "ISC",
