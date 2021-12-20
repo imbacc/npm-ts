@@ -11,7 +11,7 @@ module.exports = {
   entry: './libs/index.ts',
   output: {
     path: resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: 'index.js'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
