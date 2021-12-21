@@ -1,11 +1,11 @@
-import xx from '@/index'
+import xx from '../libs/index'
 
 test('测试A', () => {
   const result = xx.testA
-  expect(result).toBe(ab.a)
+  expect(result).toBe('aa')
 })
 
 test('测试B', () => {
   const result = xx.testB
-  expect(result).toBe(ab.b)
+  expect(result).toBe('bb')
 })

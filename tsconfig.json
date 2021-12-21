@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2015",
+    "module": "commonjs",
     "baseUrl": ".",
     "strict": true,
     "jsx": "Preserve",
@@ -11,7 +11,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
+    "lib": ["es6", "es2015", "esnext", "dom"],
     "alwaysStrict": true,
     "declaration": true,
     "removeComments": true,
@@ -24,9 +24,8 @@
     "paths": {
       "@/*": ["libs/*"],
       "@types/*": ["types/*"]
-    },
-    "plugins": [{ "transform": "typescript-transform-paths", "afterDeclarations": true }]
+    }
   },
-  "include": ["types/**/*.ts", "libs/**/*.ts", "libs/**/*.tsx", "libs/**/*.vue"],
+  "include": ["types/*.ts", "libs/*.ts", "libs/*.tsx", "libs/*.vue"],
   "exclude": ["node_modules", "dist", ".history"]
 }

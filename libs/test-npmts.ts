@@ -1,4 +1,9 @@
-export default {
-  testA: ab.a,
-  testB: ab.b
+const a: a = '11'
+
+const AB = {
+  a,
+  testA: 'aa',
+  testB: 'bb'
 }
+
+export default AB

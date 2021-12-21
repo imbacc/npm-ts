@@ -2,7 +2,7 @@
   "name": "imba-npm-ts",
   "version": "1.0.0",
   "description": "描述",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
@@ -15,11 +15,8 @@
     "preinstall": "npx only-allow pnpm"
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
-  "directories": {
-    "libs": "libs"
-  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-syntax-typescript": "^7.16.5",
