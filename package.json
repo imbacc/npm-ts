@@ -10,8 +10,9 @@
     "init": "del /q /s node_modules && pnpm install",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "pub": "npm publish --access=public --registry=https://registry.npmjs.org/",
-    "pub:beta": "npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/",
+    "pub": "npx bumpp --commit --tag --push",
+    "pub2": "npm publish --access=public --registry=https://registry.npmjs.org/",
+    "pub2:beta": "npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/",
     "preinstall": "npx only-allow pnpm"
   },
   "files": [
@@ -29,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "5.0.0",
     "autoprefixer": "10.0.2",
+    "bumpp": "^7.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",

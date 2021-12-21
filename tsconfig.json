@@ -27,5 +27,5 @@
     }
   },
   "include": ["types/*.ts", "libs/*.ts", "libs/*.tsx", "libs/*.vue"],
-  "exclude": ["node_modules", "dist", ".history"]
+  "exclude": ["node_modules", "tests", "docs", "dist", ".history"]
 }
