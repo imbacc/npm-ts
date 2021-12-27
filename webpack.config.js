@@ -25,7 +25,7 @@ module.exports = {
         use: {
           loader: 'ts-loader'
         },
-        exclude: /node_modeules/
+        exclude: /node_modules/
       }
     ]
   },

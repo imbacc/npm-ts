@@ -10,7 +10,7 @@
     "init": "del /q /s node_modules && pnpm install",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "pub": "npx bumpp --commit --tag --push",
+    "pub": "npx bumpp --commit --tag --push && npm run pub2",
     "pub2": "npm publish --access=public --registry=https://registry.npmjs.org/",
     "pub2:beta": "npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/",
     "preinstall": "npx only-allow pnpm"
