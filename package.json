@@ -2,49 +2,27 @@
   "name": "imba-npm-ts",
   "version": "1.0.0",
   "description": "描述",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "tsc",
     "test": "jest",
     "init": "del /q /s node_modules && pnpm install",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "adduser": "npm adduser --access=public --registry=https://registry.npmjs.org/",
     "pub": "bumpp --commit --tag --push && npm run pub2",
-    "pub2": "npm publish --access=public --registry=https://registry.npmjs.org/",
-    "pub2:beta": "npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/"
+    "pub2": "npm run build && npm publish --access=public --registry=https://registry.npmjs.org/",
+    "pub2:beta": "npm run build && npm publish --access=public --dist-tag beta-1.0.0 --registry=https://registry.npmjs.org/",
+    "rm:package": "npm unpublish --force"
   },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-syntax-typescript": "^7.16.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
-    "@babel/types": "^7.16.0",
-    "@jest/types": "^27.4.2",
-    "@types/babel__generator": "^7.6.3",
     "@types/jest": "^27.0.3",
-    "@types/yargs-parser": "^20.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "5.0.0",
-    "autoprefixer": "10.0.2",
     "bumpp": "^7.1.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "jest": "26",
-    "mime-types": "^2.1.34",
-    "postcss": "8.1.0",
     "prettier": "2.0.0",
-    "prettier-eslint": "^13.0.0",
     "ts-jest": "^26.5.6",
-    "ts-loader": "^8.0.12",
-    "typescript": "^3.9.3",
-    "vuepress": "1.8.2",
-    "webpack": "^5.10.3",
-    "webpack-cli": "^4.2.0"
+    "typescript": "^4.5.5",
+    "vuepress": "1.8.2"
   },
   "repository": {
     "type": "git",
@@ -58,9 +36,5 @@
   "bugs": {
     "url": "https://github.com/imbacc/npm-ts/issues"
   },
-  "homepage": "https://github.com/imbacc/npm-ts#readme",
-  "engines": {
-    "node": ">= 14",
-    "pnpm": ">= 6"
-  }
+  "homepage": "https://github.com/imbacc/npm-ts#readme"
 }

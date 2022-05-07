@@ -1,2 +1,3 @@
-import moduleName from './test-npmts'
-export default moduleName
+import AB, { CD } from './test-npmts'
+export { CD }
+export default AB
