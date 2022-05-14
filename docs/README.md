@@ -1,3 +1,7 @@
+# docsify 文档
+
+https://docsify.js.org/#/zh-cn/cover
+
 # 用于发布 npm 包 ts 打包
 
 #### 首先先执行 -> 成功登录后
@@ -12,7 +16,7 @@
 
 `pnpm run build`
 
-#### 上传 npm 包 当前命令是打 tag 并上传到 npm
+#### 上传 npm 包 当前是打 tag 并上传到 npm
 
 `pnpm run pub`
 
@@ -20,11 +24,9 @@
 
 `pnpm run pub2`
 
-#### 删除已发布的包 将直接删除,谨慎操作!
+#### 删除已发布的包
 
 `pnpm run rm:package`
-
-# ------------------------
 
 # 初始化
 

@@ -1,11 +1,26 @@
-import xx from '../libs/index'
+import { describe, it } from 'mocha'
+import { expect } from 'chai'
 
-test('测试A', () => {
-  const result = xx.testA
-  expect(result).toBe('aa')
-})
+import AB, { CD } from '../libs/index'
 
-test('测试B', () => {
-  const result = xx.testB
-  expect(result).toBe('bb')
+describe('测试组', () => {
+  it('测试testA', () => {
+    const result = AB.testA
+    expect(result).to.be.eq('aa')
+  })
+
+  it('测试testB', () => {
+    const result = AB.testB
+    expect(result).to.be.eq('bb')
+  })
+
+  it('测试testC', () => {
+    const result = CD.testC
+    expect(result).to.be.eq('bb')
+  })
+
+  it('测试testD', () => {
+    const result = CD.testD
+    expect(result).to.be.eq('bb')
+  })
 })

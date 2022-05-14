@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "target": "esnext",
+  "module": "esnext",
+  "esModuleInterop": true,
+  "moduleResolution": "Node",
+  "lib": ["esnext"],
+  "ts-node": {
+    "module": "CommonJS",
+    "esm": true,
+    "transpileOnly": true,
+    "files": true
+  }
+}

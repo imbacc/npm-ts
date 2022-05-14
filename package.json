@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "描述",
   "main": "./dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "init": "del /q /s node_modules && pnpm install",
-    "docs": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "test": "pnpm run build && cross-env TS_NODE_PROJECT='tests/tsconfig.test.json' mocha",
+    "test:dom": "mocha init tests",
+    "init": "del /q /s node_modules && rd /q /s node_modules && pnpm install",
+    "docs": "pnpm exec docsify serve docs",
     "adduser": "npm adduser --access=public --registry=https://registry.npmjs.org/",
     "pub": "bumpp --commit --tag --push && npm run pub2",
     "pub2": "npm run build && npm publish --access=public --registry=https://registry.npmjs.org/",
@@ -16,13 +20,21 @@
     "rm:package": "npm unpublish --force"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.3",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.32",
     "bumpp": "^7.1.1",
-    "jest": "26",
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "docsify": "^4.12.2",
+    "docsify-cli": "^4.4.4",
+    "esm": "^3.2.25",
+    "mocha": "^10.0.0",
     "prettier": "2.0.0",
-    "ts-jest": "^26.5.6",
-    "typescript": "^4.5.5",
-    "vuepress": "1.8.2"
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.5.5"
   },
   "repository": {
     "type": "git",

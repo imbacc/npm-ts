@@ -1,7 +1,9 @@
-const a: a = '11'
+import type { a, c } from '#/global'
+
+const aa: a = '11'
 
 const AB: c = {
-  a,
+  aa: aa,
   testA: 'aa',
   testB: 'bb'
 }
