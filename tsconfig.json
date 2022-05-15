@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "strict": true,
     "jsx": "preserve",
+    "sourceMap": true,
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
@@ -14,6 +15,7 @@
     "lib": ["es5", "es6", "esnext", "dom"],
     "alwaysStrict": true,
     "declaration": true,
+    // "declarationDir": "./dist",
     "removeComments": true,
     "diagnostics": true,
     // "incremental": true,
@@ -21,15 +23,22 @@
     // "emitDecoratorMetadata": true,
     "noImplicitAny": true,
     "skipLibCheck": false,
+    "importHelpers": true,
+    "pretty": true,
     "rootDir": "./libs",
     "outDir": "./dist",
     "types": ["node"],
-    "typeRoots": ["types"],
+    "typeRoots": ["types", "node_modules/@types"],
     "paths": {
       "@/*": ["./libs/*"],
       "#/*": ["./types/*"]
     }
   },
-  "include": ["types/**/*.ts", "tests/**/*.ts", "libs/**/*.ts", "libs/**/*.tsx", "libs/**/*.vue"],
+  "include": [
+    "types/**/*",
+    "tests/**/*",
+    "libs/**/*"
+  ],
+  // "include": ["types/**/*.ts", "tests/**/*.ts", "libs/**/*.ts", "libs/**/*.tsx", "libs/**/*.vue"],
   "exclude": ["node_modules", "tests", "docs", "dist", ".history"]
 }

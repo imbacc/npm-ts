@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "pnpm run build && cross-env TS_NODE_PROJECT='tests/tsconfig.test.json' mocha",
+    "test": "cross-env TS_NODE_PROJECT='tests/tsconfig.test.json' mocha --forbid-only",
     "test:dom": "mocha init tests",
     "init": "del /q /s node_modules && rd /q /s node_modules && pnpm install",
     "docs": "pnpm exec docsify serve docs",
@@ -20,6 +20,8 @@
     "rm:package": "npm unpublish --force"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/register": "^7.17.7",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.32",
@@ -28,10 +30,8 @@
     "cross-env": "^7.0.3",
     "docsify": "^4.12.2",
     "docsify-cli": "^4.4.4",
-    "esm": "^3.2.25",
     "mocha": "^10.0.0",
     "prettier": "2.0.0",
-    "ts-mocha": "^10.0.0",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.5.5"
