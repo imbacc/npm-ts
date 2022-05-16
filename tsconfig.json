@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "esnext",
+    "module": "es6",
     "baseUrl": ".",
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
@@ -15,7 +15,6 @@
     "lib": ["es5", "es6", "esnext", "dom"],
     "alwaysStrict": true,
     "declaration": true,
-    // "declarationDir": "./dist",
     "removeComments": true,
     "diagnostics": true,
     // "incremental": true,
@@ -28,17 +27,8 @@
     "rootDir": "./libs",
     "outDir": "./dist",
     "types": ["node"],
-    "typeRoots": ["types", "node_modules/@types"],
-    "paths": {
-      "@/*": ["./libs/*"],
-      "#/*": ["./types/*"]
-    }
+    "typeRoots": ["types", "node_modules/@types"]
   },
-  "include": [
-    "types/**/*",
-    "tests/**/*",
-    "libs/**/*"
-  ],
-  // "include": ["types/**/*.ts", "tests/**/*.ts", "libs/**/*.ts", "libs/**/*.tsx", "libs/**/*.vue"],
+  "include": ["libs/**/*.ts", "libs/**/*.tsx", "libs/**/*.vue"],
   "exclude": ["node_modules", "tests", "docs", "dist", ".history"]
 }

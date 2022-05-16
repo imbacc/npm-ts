@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "描述",
   "main": "./dist/index.js",
-  "type": "module",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "cross-env TS_NODE_PROJECT='tests/tsconfig.test.json' mocha --forbid-only",
-    "test:dom": "mocha init tests",
+    "build": "rd /q /s dist && tsc && xcopy /E /C /F /Y \"libs/types/*\" \"dist/types/\"",
+    "test": "cross-env TS_NODE_PROJECT='tests/tsconfig.test.json' mocha -r ts-node/register tests/*.spec.ts",
     "init": "del /q /s node_modules && rd /q /s node_modules && pnpm install",
     "docs": "pnpm exec docsify serve docs",
     "adduser": "npm adduser --access=public --registry=https://registry.npmjs.org/",

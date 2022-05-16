@@ -1,7 +1,7 @@
-import { describe, it } from 'mocha'
 import { expect } from 'chai'
-
+import { describe, it } from 'mocha'
 import AB, { CD } from '../libs/index'
+
 
 describe('测试组', () => {
   it('测试testA', () => {
@@ -16,11 +16,11 @@ describe('测试组', () => {
 
   it('测试testC', () => {
     const result = CD.testC
-    expect(result).to.be.eq('bb')
+    expect(result).to.be.eq('cc')
   })
 
   it('测试testD', () => {
     const result = CD.testD
-    expect(result).to.be.eq('bb')
+    expect(result).to.be.eq('dd')
   })
 })

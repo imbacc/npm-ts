@@ -1,4 +1,4 @@
-import type { a, c } from '#/global'
+import type { a, c } from './types/global'
 
 const aa: a = '11'
 
